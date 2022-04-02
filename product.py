@@ -3,9 +3,10 @@ seen_prods = [87, 1, 5]
 d = []
 def filter_products(products, seen_prods):
     for item in products:
-        if item != seen_prods:
-            d.append(products)
-    return d
+        if item not in d:
+            d.append(item)
+            print(d)
+
 
 
 print(filter_products(
